@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    background: #FAFAF9;
+    font-family: Sora;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.257); 
+    width: 375px;
+    max-height: 400px;
+    min-height: 375px;
+    display: flex;  
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 16px;
+    position: relative;
+   animation: justappear.9s linear forwards;
+
+}
+
+img {
+
+    object-fit: cover;
+    height: 336px;
+    height: 152px;
+    border-radius: 20px;
+}
+
+span:first-child {
+width: 50px;
+height: 16px;
+background-color: #E6D6FC;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 16px;
+font-family: Sora;
+font-size: 09px;
+font-weight: 600;
+color: #883AE1;
+}
+
+span:last-child {
+    color: #6C727F;
+    position: relative;
+    top: 2rem;
+}
+
+span:last-child:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 407px;
+    background: rgba(108,114,127,.2);
+    left: -1rem;
+    height: .05rem;
+    top: -1rem;
+}
+
+p{
+    font-weight: 300;
+}
+
+article,article div {
+    display: grid;
+}
+
+article {
+    gap: 1rem;
+}
+
+article div {
+    gap: 6px;
+}
+
+@media (max-width:400px) {
+    .container {
+        width: 95vw;
+    }
+
+    img, span:last-child:before {
+        width: 100%;
+    }
+}
+
+
+@keyframes justappear {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+
+}
